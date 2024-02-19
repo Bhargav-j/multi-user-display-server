@@ -6,7 +6,7 @@ const {WebSocketServer} = require("ws");
 const server = http.createServer();
 const wsServer = new WebSocketServer({server});
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const connections = {};
 const users = {};
